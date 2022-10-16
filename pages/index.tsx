@@ -9,6 +9,7 @@ import { services } from "../data";
 import ServiceCard from "../components/ServiceCard";
 import { motion } from "framer-motion";
 import { fadeInUp, stagger, routeAnimation } from "../animations";
+import Head from "next/head";
 
 const About: NextPage = () => {
   return (
@@ -19,6 +20,17 @@ const About: NextPage = () => {
       animate="animate"
       exit="exit"
     >
+      <Head>
+        <title>Jonathan Bracho | Full Stack Web Developer | Portfolio</title>
+        <meta
+          name="description"
+          content="Full Stack Developer looking for a job, open to work"
+        />
+        <meta
+          name="keywords"
+          content="Full Stack Web Developer, JavaScript, TypeScript, React, Redux, Node.js, Express, PostgreSQL, Next.js"
+        />
+      </Head>
       <h5 className="my-3 text-sm font-medium text-justify">
         I am a Full Stack Developer with a wide range of skills and knowledge
         that allow me to develop and maintain web applications. I am comfortable

@@ -6,6 +6,7 @@ import { Category } from "../types";
 import { motion } from "framer-motion";
 import { stagger, fadeInUp, routeAnimation } from "../animations";
 import { NextPage } from "next";
+import Head from "next/head";
 
 const Projects: NextPage = () => {
   const [projects, setProjects] = useState(projectsData);
@@ -34,6 +35,17 @@ const Projects: NextPage = () => {
       animate="animate"
       exit="exit"
     >
+      <Head>
+        <title>Jonathan Bracho | Full Stack Web Developer | Projects</title>
+        <meta
+          name="description"
+          content="Full Stack Developer looking for a job, open to work"
+        />
+        <meta
+          name="keywords"
+          content="Full Stack Web Developer, JavaScript, TypeScript, React, Redux, Node.js, Express, PostgreSQL, Next.js"
+        />
+      </Head>
       <ProjectsNavBar handleCategory={handleCategory} active={active} />
       <motion.div
         className="relative grid grid-cols-12 gap-4 my-3"

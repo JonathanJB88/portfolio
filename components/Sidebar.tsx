@@ -36,6 +36,7 @@ const Sidebar: FunctionComponent = () => {
         className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200"
         href="/assets/Jonathan_Bracho_Resume.pdf"
         download="Jonathan_Bracho_Resume.pdf"
+        aria-label="Resume"
       >
         <FaFileDownload className="w-4 h-4 mx-1 text-orange" /> Download Resume
       </a>
@@ -44,6 +45,7 @@ const Sidebar: FunctionComponent = () => {
           href="https://www.linkedin.com/in/jonathanbracho/"
           target="_blank"
           rel="noreferrer"
+          aria-label="LinkedIn"
         >
           <AiFillLinkedin className="w-8 h-8 mx-2 cursor-pointer" />
         </a>
@@ -51,6 +53,7 @@ const Sidebar: FunctionComponent = () => {
           href="https://github.com/JonathanJB88"
           target="_blank"
           rel="noreferrer"
+          aria-label="Github"
         >
           <AiFillGithub className="w-8 h-8 mx-2 cursor-pointer" />
         </a>

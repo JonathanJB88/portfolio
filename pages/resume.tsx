@@ -4,6 +4,7 @@ import Bar from "../components/Bar";
 import { motion } from "framer-motion";
 import { fadeInUp, routeAnimation } from "../animations";
 import { NextPage } from "next";
+import Head from "next/head";
 
 const Resume: NextPage = () => {
   const profession = `Bachelor's Degree in Mathematics and Physics Education`;
@@ -15,6 +16,17 @@ const Resume: NextPage = () => {
       animate="animate"
       exit="exit"
     >
+      <Head>
+        <title>Jonathan Bracho | Full Stack Web Developer | Resume</title>
+        <meta
+          name="description"
+          content="Full Stack Developer looking for a job, open to work"
+        />
+        <meta
+          name="keywords"
+          content="Full Stack Web Developer, JavaScript, TypeScript, React, Redux, Node.js, Express, PostgreSQL, Next.js"
+        />
+      </Head>
       <div className="grid gap-6 md:grid-cols-2">
         <motion.div variants={fadeInUp} initial="initial" animate="animate">
           <h5 className="my-3 text-xl font-bold">Education</h5>
