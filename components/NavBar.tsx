@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import NavItem from "./NavItem";
 
-const NavBar = () => {
+const NavBar: FunctionComponent = () => {
   const [activeItem, setActiveItem] = useState<string>("");
   const { pathname } = useRouter();
 

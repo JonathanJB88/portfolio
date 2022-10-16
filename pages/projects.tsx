@@ -5,8 +5,9 @@ import { projects as projectsData } from "../data";
 import { Category } from "../types";
 import { motion } from "framer-motion";
 import { stagger, fadeInUp, routeAnimation } from "../animations";
+import { NextPage } from "next";
 
-const Projects = () => {
+const Projects: NextPage = () => {
   const [projects, setProjects] = useState(projectsData);
   const [active, setActive] = useState("All");
   const [showDetail, setShowDetail] = useState<number | null>(null);

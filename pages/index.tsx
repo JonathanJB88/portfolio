@@ -3,13 +3,14 @@ import {
   GetServerSidePropsContext,
   GetStaticProps,
   GetStaticPropsContext,
+  NextPage,
 } from "next";
 import { services } from "../data";
 import ServiceCard from "../components/ServiceCard";
 import { motion } from "framer-motion";
 import { fadeInUp, stagger, routeAnimation } from "../animations";
 
-const About = () => {
+const About: NextPage = () => {
   return (
     <motion.div
       className="flex flex-col flex-grow px-6 pt-1"

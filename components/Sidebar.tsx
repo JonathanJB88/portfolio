@@ -4,8 +4,9 @@ import { FaFileDownload } from "react-icons/fa";
 import { SiGmail, SiWhatsapp } from "react-icons/si";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { FunctionComponent } from "react";
 
-const Sidebar = () => {
+const Sidebar: FunctionComponent = () => {
   const profPicUrl =
     "https://drive.google.com/uc?id=1j-TrcWFOymG5R3vI3H1So13Tszm3-a50";
 

@@ -3,8 +3,9 @@ import { languages, tools } from "../data";
 import Bar from "../components/Bar";
 import { motion } from "framer-motion";
 import { fadeInUp, routeAnimation } from "../animations";
+import { NextPage } from "next";
 
-const Resume = () => {
+const Resume: NextPage = () => {
   const profession = `Bachelor's Degree in Mathematics and Physics Education`;
   return (
     <motion.div
