@@ -17,7 +17,7 @@ const Sidebar: FunctionComponent = () => {
   };
 
   return (
-    <div>
+    <>
       <Image
         width={200}
         height={200}
@@ -93,7 +93,7 @@ const Sidebar: FunctionComponent = () => {
           Light Mode
         </button>
       )}
-    </div>
+    </>
   );
 };
 

@@ -58,15 +58,13 @@ const About: NextPage = () => {
 
 export default About;
 
-// export const getServerSideProps: GetServerSideProps = async (
-//   context: GetServerSidePropsContext
-// ) => {
-//   const res = await fetch("http://localhost:3000/api/services");
-//   const data = await res.json();
-//   return {
-//     props: { services: data },
-//   };
-// };
+export const getServerSideProps: GetServerSideProps = async () => {
+  // const res = await fetch(`${process.env.VERCEL_URL}/api/services`);
+  // const data = await res.json();
+  return {
+    props: { endpoint: process.env.VERCEL_URL },
+  };
+};
 
 // export const getStaticProps: GetStaticProps = async (
 //   context: GetStaticPropsContext
