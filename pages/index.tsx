@@ -6,10 +6,18 @@ import {
 } from "next";
 import { services } from "../data";
 import ServiceCard from "../components/ServiceCard";
+import { motion } from "framer-motion";
+import { fadeInUp, stagger, routeAnimation } from "../animations";
 
 const About = () => {
   return (
-    <div className="flex flex-col flex-grow px-6 pt-1">
+    <motion.div
+      className="flex flex-col flex-grow px-6 pt-1"
+      variants={routeAnimation}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <h5 className="my-3 text-sm font-medium text-justify">
         I am a Full Stack Developer with a wide range of skills and knowledge
         that allow me to develop and maintain web applications. I am comfortable
@@ -26,18 +34,24 @@ const About = () => {
         <h6 className="my-3 text-xl font-bold tracking-wide">
           What I am good at
         </h6>
-        <div className="grid gap-6 my-3 md:grid-cols-2">
+        <motion.div
+          className="grid gap-6 my-3 md:grid-cols-2"
+          variants={stagger}
+          initial="initial"
+          animate="animate"
+        >
           {services.map((service, index) => (
-            <div
+            <motion.div
               className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 md:col-span-1"
               key={index}
+              variants={fadeInUp}
             >
               <ServiceCard service={service} />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

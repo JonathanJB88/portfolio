@@ -1,4 +1,4 @@
-import { IService, ISkill } from "./type";
+import { IProject, IService, ISkill } from "./types";
 import { RiComputerLine } from "react-icons/ri";
 import {
   FaServer,
@@ -192,5 +192,67 @@ export const tools: ISkill[] = [
     Icon: MdLanguage,
     name: "Italian",
     level: "75%",
+  },
+];
+
+export const projects: IProject[] = [
+  {
+    id: 1,
+    name: "Pokemon App",
+    description:
+      "Design and develop a Pokemon App that included: searching, filtering, sorting, creating and updating Pokemons",
+    image_path: "/images/pokemon.gif",
+    deployed_url: "https://pokemon-app-by-jonathanbracho.vercel.app/",
+    github_url: "https://github.com/JonathanJB88/PI-Pokemon",
+    category: ["JavaScript", "React", "Pure CSS"],
+    key_techs: [
+      "React",
+      "Redux",
+      "Pure CSS",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+    ],
+  },
+  {
+    id: 2,
+    name: "World Travelers",
+    description:
+      "SPA where users can filter, sort, search, create and join other trips, pay through paypal or web3, comment on tourist activities and chat with other users. Admin users can create tourist activities in destination cities previously added.",
+    image_path: "/images/world_travelers.gif",
+    deployed_url: "https://worldtravelers-app.herokuapp.com/",
+    github_url: "https://github.com/AngelPM9506/PF-SoyHenry",
+    category: ["TypeScript", "React", "Next", "ChakraUI"],
+    key_techs: [
+      "Postgress",
+      "MongoDB",
+      "Socket.io",
+      "Nodemailer",
+      "Auth0",
+      "Cloudinary",
+      "ChakraUI",
+      "ReactQuery",
+      "Leaflet",
+      "Rainbowkit",
+      "Wagmi",
+      "Ethers.js",
+    ],
+  },
+  {
+    id: 3,
+    name: "Portfolio",
+    description:
+      "Portfolio web page developed with nextjs and Tailwind CSS. It includes my resume, skills and projects",
+    image_path: "/images/portfolio.gif",
+    deployed_url: "https://worldtravelers-app.herokuapp.com/",
+    github_url: "https://github.com/JonathanJB88/portfolio",
+    category: ["TypeScript", "React", "Next", "Tailwind CSS"],
+    key_techs: [
+      "React",
+      "Next",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Icons",
+    ],
   },
 ];

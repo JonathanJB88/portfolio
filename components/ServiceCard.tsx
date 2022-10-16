@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { IService } from "../type";
+import { IService } from "../types";
 
 const ServiceCard: FunctionComponent<{ service: IService }> = ({
   service: { Icon, title, about },

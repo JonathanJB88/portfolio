@@ -3,6 +3,7 @@ import { GoLocation } from "react-icons/go";
 import { FaFileDownload } from "react-icons/fa";
 import { SiGmail, SiWhatsapp } from "react-icons/si";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const Sidebar = () => {
   const profPicUrl =
@@ -16,8 +17,11 @@ const Sidebar = () => {
 
   return (
     <div>
-      <img
-        className="w-32 h-32 mx-auto rounded-full"
+      <Image
+        width={200}
+        height={200}
+        quality={100}
+        className="mx-auto rounded-full"
         src={profPicUrl}
         alt="Jonathan Profile Picture"
       />
@@ -29,16 +33,24 @@ const Sidebar = () => {
       </p>
       <a
         className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200"
-        href=""
-        download="name"
+        href="/assets/Jonathan_Bracho_Resume.pdf"
+        download="Jonathan_Bracho_Resume.pdf"
       >
         <FaFileDownload className="w-4 h-4 mx-1 text-orange" /> Download Resume
       </a>
       <div className="flex justify-center w-9/12 mx-auto my-5 text-orange md:w-full">
-        <a href="https://www.linkedin.com/in/jonathanbracho/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/jonathanbracho/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <AiFillLinkedin className="w-8 h-8 mx-2 cursor-pointer" />
         </a>
-        <a href="https://github.com/JonathanJB88" target="_blank">
+        <a
+          href="https://github.com/JonathanJB88"
+          target="_blank"
+          rel="noreferrer"
+        >
           <AiFillGithub className="w-8 h-8 mx-2 cursor-pointer" />
         </a>
       </div>
