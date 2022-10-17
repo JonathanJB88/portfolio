@@ -7,9 +7,6 @@ import Image from "next/image";
 import { FunctionComponent } from "react";
 
 const Sidebar: FunctionComponent = () => {
-  const profPicUrl =
-    "https://drive.google.com/uc?id=1j-TrcWFOymG5R3vI3H1So13Tszm3-a50";
-
   const { theme, setTheme } = useTheme();
 
   const changeTheme = () => {
@@ -23,7 +20,7 @@ const Sidebar: FunctionComponent = () => {
         height={200}
         quality={100}
         className="mx-auto rounded-full"
-        src={profPicUrl}
+        src="/images/profile_picture_JonathanBracho.png"
         alt="Jonathan Profile Picture"
       />
       <h3 className="my-4 text-2xl font-medium tracking-wider font-kaushan">
