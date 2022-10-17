@@ -62,12 +62,16 @@ const ProjectCard: FunctionComponent<{
               <a
                 href={github_url}
                 className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 rounded-lg dark:bg-dark-200"
+                target="_blank"
+                aria-label="Github Project"
               >
                 <AiFillGithub /> <span>GitHub</span>
               </a>
               <a
                 href={deployed_url}
                 className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 rounded-lg dark:bg-dark-200"
+                target="_blank"
+                aria-label="Project Link"
               >
                 <AiFillProject /> <span>Deploy</span>
               </a>

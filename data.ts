@@ -244,7 +244,7 @@ export const projects: IProject[] = [
     description:
       "Portfolio web page developed with nextjs and Tailwind CSS. It includes my resume, skills and projects",
     image_path: "/images/portfolio.gif",
-    deployed_url: "https://worldtravelers-app.herokuapp.com/",
+    deployed_url: "https://jonathanbrachoportfolio.vercel.app/",
     github_url: "https://github.com/JonathanJB88/portfolio",
     category: ["TypeScript", "React", "Next", "Tailwind CSS"],
     key_techs: [
