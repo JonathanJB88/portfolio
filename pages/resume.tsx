@@ -32,7 +32,13 @@ const Resume: NextPage = () => {
           <h5 className="my-3 text-xl font-bold">Education</h5>
           <div>
             <h5 className="my-2 text-lg font-bold">Full Stack Developer</h5>
-            <p className="my-3">Henry | September 2022</p>
+            <p className="my-3">Henry | September 2021</p>
+            <h5 className="my-2 text-lg font-bold">
+              Master in Educational Administration
+            </h5>
+            <p className="my-3">
+              Universidad Rafael María Baralt, Venezuela | September 2017
+            </p>
             <h5 className="my-2 text-lg font-bold">{profession}</h5>
             <p className="my-3">University of Zulia, Venezuela. | 2011</p>
           </div>
@@ -40,11 +46,19 @@ const Resume: NextPage = () => {
         <motion.div variants={fadeInUp} initial="initial" animate="animate">
           <h5 className="my-3 text-xl font-bold">Experience</h5>
           <div>
-            <h5 className="my-2 text-lg font-bold">Full Stack Developer</h5>
-            <p className="my-3">Henry | October 2022</p>
+            <h5 className="my-2 text-lg font-bold">
+              Frontend | Full Stack Developer
+            </h5>
+            <p className="my-3">
+              Four Tools Languages Academy | November 2021 - October 2022
+            </p>
             <p className="my-3 text-base text-justify">
-              World Travelers I was part of the team of developers in charge of
-              the design and development of a SPA using Next.js and Typescript.
+              {`The tool was originally an Airtable database used to manage
+              educational program sales and enrollments, but the company's rapid
+              growth required it to become a more robust system. It was then
+              redeveloped using the MERN stack, with Next.js + Typescript. The
+              technology stack for the frontend was made up of react / next.js,
+              typescript, redux toolkit, MaterialUI.`}
               <Link href="/projects">
                 <a>
                   <span className="hover:text-orange">
