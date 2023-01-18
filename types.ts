@@ -1,4 +1,4 @@
-import { IconType } from "react-icons";
+import { IconType } from 'react-icons';
 
 export interface IService {
   title: string;
@@ -24,10 +24,10 @@ export interface IProject {
 }
 
 export type Category =
-  | "React"
-  | "Next"
-  | "Pure CSS"
-  | "Tailwind CSS"
-  | "ChakraUI"
-  | "JavaScript"
-  | "TypeScript";
+  | 'React'
+  | 'Next'
+  | 'CSS3'
+  | 'Tailwind CSS'
+  | 'ChakraUI'
+  | 'JavaScript'
+  | 'TypeScript';

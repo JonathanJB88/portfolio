@@ -1,20 +1,22 @@
-import { useState } from "react";
-import ProjectCard from "../components/ProjectCard";
-import ProjectsNavBar from "../components/ProjectsNavBar";
-import { projects as projectsData } from "../data";
-import { Category } from "../types";
-import { motion } from "framer-motion";
-import { stagger, fadeInUp, routeAnimation } from "../animations";
-import { NextPage } from "next";
-import Head from "next/head";
+import { useRef, useState } from 'react';
+import ProjectCard from '../components/ProjectCard';
+import ProjectsNavBar from '../components/ProjectsNavBar';
+import { projects as projectsData } from '../data';
+import { Category } from '../types';
+import { motion } from 'framer-motion';
+import { stagger, fadeInUp, routeAnimation } from '../animations';
+import { NextPage } from 'next';
+import Head from 'next/head';
 
 const Projects: NextPage = () => {
   const [projects, setProjects] = useState(projectsData);
-  const [active, setActive] = useState("All");
+  const [active, setActive] = useState('All');
   const [showDetail, setShowDetail] = useState<number | null>(null);
 
-  const handleCategory = (category: Category | "All") => {
-    if (category === "All") {
+  const parentDivRef = useRef<HTMLDivElement>(null);
+
+  const handleCategory = (category: Category | 'All') => {
+    if (category === 'All') {
       setProjects(projectsData);
       setActive(category);
       return;
@@ -28,22 +30,25 @@ const Projects: NextPage = () => {
 
   return (
     <motion.div
-      className="px-5 py-2 overflow-y-scroll lg:overflow-y-hidden"
-      style={{ height: "65vh" }}
+      className="relative px-5 py-2 overflow-y-auto"
+      style={{ height: '65vh' }}
       variants={routeAnimation}
       initial="initial"
       animate="animate"
       exit="exit"
+      ref={parentDivRef}
     >
       <Head>
-        <title>Jonathan Bracho | Full Stack Web Developer | Projects</title>
+        <title>
+          Jonathan Bracho | Frontend - Full Stack Web Developer | Projects
+        </title>
         <meta
           name="description"
-          content="Full Stack Developer looking for a job, open to work"
+          content="Frontend | Full Stack Developer looking for a job, open to work"
         />
         <meta
           name="keywords"
-          content="Full Stack Web Developer, JavaScript, TypeScript, React, Redux, Node.js, Express, PostgreSQL, Next.js"
+          content="Frontend - Full Stack Web Developer, JavaScript, TypeScript, React, Redux, Node.js, Express.js, Redux-toolkit, Cypress, Jest, Next.js"
         />
       </Head>
       <ProjectsNavBar handleCategory={handleCategory} active={active} />
@@ -63,6 +68,7 @@ const Projects: NextPage = () => {
               project={project}
               showDetail={showDetail}
               setShowDetail={setShowDetail}
+              parentDivRef={parentDivRef}
             />
           </motion.div>
         ))}

@@ -4,12 +4,12 @@ import {
   GetStaticProps,
   GetStaticPropsContext,
   NextPage,
-} from "next";
-import { services } from "../data";
-import ServiceCard from "../components/ServiceCard";
-import { motion } from "framer-motion";
-import { fadeInUp, stagger, routeAnimation } from "../animations";
-import Head from "next/head";
+} from 'next';
+import { services, aboutSection } from '../data';
+import ServiceCard from '../components/ServiceCard';
+import { motion } from 'framer-motion';
+import { fadeInUp, stagger, routeAnimation } from '../animations';
+import Head from 'next/head';
 
 const About: NextPage = () => {
   return (
@@ -21,28 +21,22 @@ const About: NextPage = () => {
       exit="exit"
     >
       <Head>
-        <title>Jonathan Bracho | Full Stack Web Developer | Portfolio</title>
+        <title>
+          Jonathan Bracho | Frontend - Full Stack Web Developer | Portfolio
+        </title>
         <meta
           name="description"
-          content="Full Stack Developer looking for a job, open to work"
+          content="Frontend | Full Stack Developer looking for a job, open to work"
         />
         <meta
           name="keywords"
-          content="Full Stack Web Developer, JavaScript, TypeScript, React, Redux, Node.js, Express, PostgreSQL, Next.js"
+          content="Frontend - Full Stack Web Developer, JavaScript, TypeScript, React, Redux, Node.js, Express.js, Redux-toolkit, Cypress, Jest, Next.js"
         />
       </Head>
-      <h5 className="my-3 text-sm font-medium text-justify">
-        I am a Full Stack Developer with a wide range of skills and knowledge
-        that allow me to develop and maintain web applications. I am comfortable
-        working with both front-end and back-end technologies, and have a strong
-        understanding of how the two work together. My background in teaching
-        means that I am able to effectively communicate with people from all
-        walks of life, I believe that this makes me a better developer, as I am
-        always looking to improve my skills.
-      </h5>
+      <h5 className="my-3 text-sm font-medium text-justify">{aboutSection}</h5>
       <div
         className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-100"
-        style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
+        style={{ marginLeft: '-1.5rem', marginRight: '-1.5rem' }}
       >
         <h6 className="my-3 text-xl font-bold tracking-wide">
           What I am good at

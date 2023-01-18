@@ -1,15 +1,16 @@
-import { FunctionComponent, useState } from "react";
-import { AiFillGithub, AiFillProject } from "react-icons/ai";
-import { MdClose } from "react-icons/md";
-import { IProject } from "../types";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { fadeInUp, stagger } from "../animations";
+import { FunctionComponent } from 'react';
+import { AiFillGithub, AiFillProject } from 'react-icons/ai';
+import { MdClose } from 'react-icons/md';
+import { IProject } from '../types';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { fadeInUp, stagger } from '../animations';
 
 const ProjectCard: FunctionComponent<{
   project: IProject;
   showDetail: number | null;
   setShowDetail: (id: number | null) => void;
+  parentDivRef: React.RefObject<HTMLDivElement>;
 }> = ({
   project: {
     id,
@@ -22,7 +23,17 @@ const ProjectCard: FunctionComponent<{
   },
   showDetail,
   setShowDetail,
+  parentDivRef,
 }) => {
+  const executeScroll = () => {
+    if (parentDivRef.current) {
+      parentDivRef.current.scrollTo({
+        top: parentDivRef.current?.scrollTop - 1500,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <div>
       <Image
@@ -31,7 +42,7 @@ const ProjectCard: FunctionComponent<{
         className="rounded-sm cursor-pointer"
         onClick={() => {
           setShowDetail(id);
-          window.scrollTo(0, 0);
+          executeScroll();
         }}
         width={300}
         height={150}
@@ -86,7 +97,10 @@ const ProjectCard: FunctionComponent<{
             >
               {name}
             </motion.h2>
-            <motion.h3 variants={fadeInUp} className="mb-3 text-sm font-medium">
+            <motion.h3
+              variants={fadeInUp}
+              className="mb-3 text-sm font-medium text-justify"
+            >
               {description}
             </motion.h3>
             <motion.div
