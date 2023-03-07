@@ -1,11 +1,6 @@
 import { IProject, IService, ISkill } from './types';
 import { RiComputerLine } from 'react-icons/ri';
-import {
-  FaServer,
-  FaChalkboardTeacher,
-  FaReact,
-  FaTrello,
-} from 'react-icons/fa';
+import { FaServer, FaChalkboardTeacher, FaReact, FaTrello } from 'react-icons/fa';
 import { MdDeveloperMode } from 'react-icons/md';
 import { MdLanguage } from 'react-icons/md';
 import { DiScrum } from 'react-icons/di';
@@ -50,14 +45,12 @@ export const services: IService[] = [
   {
     Icon: BiTestTube,
     title: 'e2e Testing & Unit Tests',
-    about:
-      'I am able to create e2e tests using Cypress and unit tests using Jest.',
+    about: 'I am able to create e2e tests using Cypress and unit tests using Jest.',
   },
   {
     Icon: FaServer,
     title: 'Backend  Development',
-    about:
-      'Handle databases, server, api using <b>Express.js</b> & other popular frameworks.',
+    about: 'Handle databases, server, api using <b>Express.js</b> & other popular frameworks.',
   },
   {
     Icon: MdDeveloperMode,
@@ -68,8 +61,7 @@ export const services: IService[] = [
   {
     Icon: DiScrum,
     title: 'Scrum Master',
-    about:
-      'A high-quality coding service with a focus on the <b>Scrum</b> methodology.',
+    about: 'A high-quality coding service with a focus on the <b>Scrum</b> methodology.',
   },
   {
     Icon: FaChalkboardTeacher,
@@ -214,13 +206,7 @@ export const projects: IProject[] = [
     deployed_url: 'https://jonathanbrachoportfolio.vercel.app/',
     github_url: 'https://github.com/JonathanJB88/portfolio',
     category: ['TypeScript', 'React', 'Next', 'Tailwind CSS'],
-    key_techs: [
-      'React',
-      'Next',
-      'Tailwind CSS',
-      'Framer Motion',
-      'React Icons',
-    ],
+    key_techs: ['React', 'Next', 'Tailwind CSS', 'Framer Motion', 'React Icons'],
   },
   {
     id: 2,
@@ -235,21 +221,12 @@ export const projects: IProject[] = [
   {
     id: 3,
     name: 'Maps App',
-    description:
-      'To improve my knowledge of React and Typescript, I developed this map application.',
+    description: 'To improve my knowledge of React and Typescript, I developed this map application.',
     image_path: '/images/maps-app.gif',
     deployed_url: 'https://jonathandev-mapsapp.netlify.app/',
     github_url: 'https://github.com/JonathanJB88/Maps-App',
     category: ['TypeScript', 'React', 'CSS3'],
-    key_techs: [
-      'React',
-      'TypeScript',
-      'Vite',
-      'Jest',
-      'Css',
-      'Mapbox',
-      'React Testing Library',
-    ],
+    key_techs: ['React', 'TypeScript', 'Vite', 'Jest', 'Css', 'Mapbox', 'React Testing Library'],
   },
   {
     id: 4,
@@ -259,14 +236,7 @@ export const projects: IProject[] = [
     deployed_url: 'https://jonathandev-calendar-app.netlify.app/',
     github_url: 'https://github.com/JonathanJB88/CalendarApp_Frontend-React',
     category: ['JavaScript', 'React', 'CSS3'],
-    key_techs: [
-      'React',
-      'JavaScript',
-      'Vite',
-      'Jest',
-      'Css',
-      'React Testing Library',
-    ],
+    key_techs: ['React', 'JavaScript', 'Vite', 'Jest', 'Css', 'React Testing Library'],
   },
   {
     id: 5,
@@ -296,7 +266,7 @@ export const projects: IProject[] = [
     description:
       'SPA where users can filter, sort, search, create and join other trips, pay through paypal or web3, comment on tourist activities and chat with other users. Admin users can create tourist activities in destination cities previously added.',
     image_path: '/images/world_travelers.gif',
-    deployed_url: 'https://worldtravelers-app.herokuapp.com/',
+    deployed_url: 'https://world-travelers-production.up.railway.app/',
     github_url: 'https://github.com/AngelPM9506/PF-SoyHenry',
     category: ['TypeScript', 'React', 'Next', 'ChakraUI'],
     key_techs: [
