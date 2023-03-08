@@ -32,7 +32,7 @@ const About: NextPage = () => {
           {services.map((service, index) => (
             <motion.div
               className='col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 md:col-span-1'
-              key={index}
+              key={service.title + index}
               variants={fadeInUp}
             >
               <ServiceCard service={service} />

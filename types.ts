@@ -25,6 +25,7 @@ export interface IProject {
 
 export type Category =
   | 'React'
+  | 'React Native'
   | 'Next'
   | 'CSS3'
   | 'Tailwind CSS'

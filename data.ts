@@ -1,6 +1,6 @@
 import { IProject, IService, ISkill } from './types';
 import { RiComputerLine } from 'react-icons/ri';
-import { FaServer, FaChalkboardTeacher, FaReact, FaTrello } from 'react-icons/fa';
+import { FaServer, FaChalkboardTeacher, FaReact, FaTrello, FaMobileAlt } from 'react-icons/fa';
 import { MdDeveloperMode } from 'react-icons/md';
 import { MdLanguage } from 'react-icons/md';
 import { DiScrum } from 'react-icons/di';
@@ -45,7 +45,14 @@ export const services: IService[] = [
   {
     Icon: BiTestTube,
     title: 'e2e Testing & Unit Tests',
-    about: 'I am able to create e2e tests using Cypress and unit tests using Jest.',
+    about:
+      'I am able to create e2e tests using <b>Cypress</b> and unit tests using <b>Jest & React Testing Library</b>.',
+  },
+  {
+    Icon: FaMobileAlt,
+    title: 'Mobile Application Development',
+    about:
+      'I can develop beautiful and scalable mobile applications for <b>iOS</b> and <b>Android</b> using <b>React Native</b>.',
   },
   {
     Icon: FaServer,
@@ -82,8 +89,13 @@ export const languages: ISkill[] = [
     level: '89%',
   },
   {
+    Icon: FaReact,
+    name: 'React Native',
+    level: '85%',
+  },
+  {
     Icon: SiRedux,
-    name: 'Redux',
+    name: 'Redux & Redux Toolkit',
     level: '92%',
   },
   {
@@ -283,5 +295,57 @@ export const projects: IProject[] = [
       'Wagmi',
       'Ethers.js',
     ],
+  },
+  {
+    id: 8,
+    name: 'Calculator App',
+    description: 'Simple Calculator App developed with React Native + Typescript, for iOS and Android',
+    image_path: '/images/calculator.gif',
+    deployed_url: 'https://drive.google.com/file/d/1pRb-u9kmI1Hn7l_912FhVt3tLHUleJJr/view',
+    github_url: 'https://github.com/JonathanJB88/Calculator-ReactNative',
+    category: ['TypeScript', 'React Native', 'CSS3'],
+    key_techs: ['React Native', 'TypeScript'],
+  },
+  {
+    id: 9,
+    name: 'Movies App',
+    description: 'Movies App developed with React Native + Typescript, for iOS and Android.',
+    image_path: '/images/movies.gif',
+    deployed_url: 'https://drive.google.com/file/d/1s3o437uFC_lKef53EPjyLEwKSM96kxrO/view',
+    github_url: 'https://github.com/JonathanJB88/MoviesApp-reactNative',
+    category: ['TypeScript', 'React Native', 'CSS3'],
+    key_techs: ['React Native', 'TypeScript'],
+  },
+  {
+    id: 10,
+    name: 'Pokedex App',
+    description:
+      'Pokedex App developed with React Native + Typescript, for iOS and Android. Details and search by name or id is available.',
+    image_path: '/images/pokedex.gif',
+    deployed_url: 'https://drive.google.com/file/d/19U2myC_swNI4gOiS67__Ih96P3FCRRdW/view',
+    github_url: 'https://github.com/JonathanJB88/PokedexApp',
+    category: ['TypeScript', 'React Native', 'CSS3'],
+    key_techs: ['React Native', 'TypeScript'],
+  },
+  {
+    id: 11,
+    name: 'Routes App',
+    description: 'Routes App developed with React Native + Typescript, for iOS and Android.',
+    image_path: '/images/routes.gif',
+    deployed_url: 'https://drive.google.com/file/d/1phkcH9OlQdZ6bfwIZq2_MkPwMVj-08TI/view',
+    github_url: 'https://github.com/JonathanJB88/MapsApp-ReactNative',
+    category: ['TypeScript', 'React Native', 'CSS3'],
+    key_techs: ['React Native', 'TypeScript'],
+  },
+  {
+    id: 12,
+    name: 'Products App',
+    description:
+      'Products App developed with React Native + Typescript, for iOS and Android. Functionalities: User login and register, add and delete products (only admin user), access to camera and gallery to add product pictures.',
+    image_path: '/images/products.gif',
+    deployed_url: 'https://drive.google.com/file/d/1YUeCUpUja6gz1W6sbVjlfxH3_18_HDtf/view',
+    github_url: 'https://github.com/JonathanJB88/ProductsApp',
+    category: ['TypeScript', 'React Native', 'CSS3'],
+    key_techs: ['React Native', 'TypeScript', 'MongoDB', 'Cloudinary'],
   },
 ];

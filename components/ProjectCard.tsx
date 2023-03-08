@@ -12,15 +12,7 @@ const ProjectCard: FunctionComponent<{
   setShowDetail: (id: number | null) => void;
   parentDivRef: React.RefObject<HTMLDivElement>;
 }> = ({
-  project: {
-    id,
-    name,
-    description,
-    image_path,
-    deployed_url,
-    github_url,
-    key_techs,
-  },
+  project: { id, name, description, image_path, deployed_url, github_url, key_techs, category },
   showDetail,
   setShowDetail,
   parentDivRef,
@@ -39,79 +31,66 @@ const ProjectCard: FunctionComponent<{
       <Image
         src={image_path}
         alt={name}
-        className="rounded-sm cursor-pointer"
+        className='rounded-sm cursor-pointer'
         onClick={() => {
           setShowDetail(id);
           executeScroll();
         }}
         width={300}
         height={150}
-        layout="responsive"
+        objectFit={category.includes('React Native') ? 'contain' : 'cover'}
+        layout='responsive'
       />
-      <p className="my-2 text-center">{name}</p>
+      <p className='my-2 text-center'>{name}</p>
 
       {showDetail === id && (
-        <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 rounded-lg md:p-8 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
-          <motion.div variants={stagger} initial="initial" animate="animate">
-            <motion.div
-              variants={fadeInUp}
-              className="border-2 border-gray-100 rounded-lg"
-            >
+        <div className='absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 rounded-lg md:p-8 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100'>
+          <motion.div variants={stagger} initial='initial' animate='animate'>
+            <motion.div variants={fadeInUp} className='border-2 border-gray-100 rounded-lg'>
               <Image
                 width={300}
                 height={150}
-                layout="responsive"
-                className="rounded-lg"
+                objectFit={category.includes('React Native') ? 'contain' : 'cover'}
+                layout='responsive'
+                className='rounded-lg'
                 src={image_path}
                 alt={name}
               />
             </motion.div>
-            <motion.div
-              className="flex justify-center my-4 space-x-3"
-              variants={fadeInUp}
-            >
+            <motion.div className='flex justify-center my-4 space-x-3' variants={fadeInUp}>
               <a
                 href={github_url}
-                className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 rounded-lg dark:bg-dark-200"
-                target="_blank"
-                aria-label="Github Project"
-                rel="noreferrer"
+                className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 rounded-lg dark:bg-dark-200'
+                target='_blank'
+                aria-label='Github Project'
+                rel='noreferrer'
               >
                 <AiFillGithub /> <span>GitHub</span>
               </a>
               <a
                 href={deployed_url}
-                className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 rounded-lg dark:bg-dark-200"
-                target="_blank"
-                aria-label="Project Link"
-                rel="noreferrer"
+                className='flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 rounded-lg dark:bg-dark-200'
+                target='_blank'
+                aria-label='Project Link'
+                rel='noreferrer'
               >
                 <AiFillProject /> <span>Deploy</span>
               </a>
             </motion.div>
           </motion.div>
-          <motion.div variants={stagger} initial="initial" animate="animate">
-            <motion.h2
-              variants={fadeInUp}
-              className="mb-3 text-xl font-medium md:text-2xl"
-            >
+          <motion.div variants={stagger} initial='initial' animate='animate'>
+            <motion.h2 variants={fadeInUp} className='mb-3 text-xl font-medium md:text-2xl'>
               {name}
             </motion.h2>
-            <motion.h3
-              variants={fadeInUp}
-              className="mb-3 text-sm font-medium text-justify"
-            >
+            <motion.h3 variants={fadeInUp} className='mb-3 text-sm font-medium text-justify'>
               {description}
             </motion.h3>
             <motion.div
               variants={fadeInUp}
-              className="flex flex-wrap justify-center mt-5 space-x-2 text-sm tracking-wider"
+              className='flex flex-wrap justify-center mt-5 space-x-2 text-sm tracking-wider'
             >
               {key_techs.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-2 py-1 my-1 bg-gray-200 rounded-md dark:bg-dark-200"
-                >
+                <span key={tech} className='px-2 py-1 my-1 bg-gray-200 rounded-md dark:bg-dark-200'>
                   {tech}
                 </span>
               ))}
@@ -120,7 +99,7 @@ const ProjectCard: FunctionComponent<{
 
           <button
             onClick={() => setShowDetail(null)}
-            className="absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-dark-200"
+            className='absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-dark-200'
           >
             <MdClose size={30} />
           </button>
