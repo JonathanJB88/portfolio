@@ -57,21 +57,11 @@ export default About;
 // };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const endpoint = process.env.VERCEL_URL || 'http://localhost:3000';
-  // const res = await fetch(`${process.env.VERCEL_URL}/api/services`);
-  // const data = await res.json();
-  console.log({ endpoint });
+  const baseURL = process.env.VERCEL_URL || 'http://localhost:3000';
+  const res = await fetch(`${baseURL}/api/services`);
+  const data = await res.json();
+  console.log({ baseURL });
   return {
-    props: { endpoint },
+    props: { services: data },
   };
 };
-
-// export const getStaticProps: GetStaticProps = async (
-//   context: GetStaticPropsContext
-// ) => {
-//   const res = await fetch("http://localhost:3000/api/services");
-//   const data = await res.json();
-//   return {
-//     props: { services: data },
-//   };
-// };
