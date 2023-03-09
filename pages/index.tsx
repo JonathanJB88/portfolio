@@ -46,22 +46,9 @@ const About: NextPage = () => {
 
 export default About;
 
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   const endpoint = process.env.VERCEL_URL || 'http://localhost:3000';
-//   console.log({ endpoint });
-//   const res = await fetch(`${endpoint}/api/services`);
-//   const data = await res.json();
-//   return {
-//     props: { services: data },
-//   };
-// };
-
 export const getServerSideProps: GetServerSideProps = async () => {
-  const baseURL = process.env.VERCEL_URL || 'http://localhost:3000';
-  const res = await fetch(`${baseURL}/api/services`);
-  const data = await res.json();
-  console.log({ baseURL });
+  const endpoint = process.env.VERCEL_URL || 'http://localhost:3000/api/services';
   return {
-    props: { services: data },
+    props: { services: endpoint },
   };
 };
