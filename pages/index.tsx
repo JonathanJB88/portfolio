@@ -1,4 +1,4 @@
-import { GetServerSideProps, GetServerSidePropsContext, GetStaticProps, GetStaticPropsContext, NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import { services, aboutSection } from '../data';
 import ServiceCard from '../components/ServiceCard';
 import { motion } from 'framer-motion';
