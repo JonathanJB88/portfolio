@@ -47,7 +47,8 @@ const About: NextPage = () => {
 export default About;
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const endpoint = process.env.VERCEL_URL || 'http://localhost:3000';
+  const endpoint = process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000';
+  console.log({ endpoint });
   const res = await fetch(`${endpoint}/api/services`);
   const data = await res.json();
   return {
