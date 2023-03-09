@@ -59,6 +59,7 @@ export default About;
 export const getServerSideProps: GetServerSideProps = async () => {
   // const res = await fetch(`${process.env.VERCEL_URL}/api/services`);
   // const data = await res.json();
+  console.log({ endpoint: process.env.VERCEL_URL });
   return {
     props: { endpoint: process.env.VERCEL_URL },
   };
