@@ -211,6 +211,17 @@ export const tools: ISkill[] = [
 export const projects: IProject[] = [
   {
     id: 1,
+    name: 'Física Fácil',
+    description:
+      'Física Fácil is a web app for solving physics problems using AI. Built with React, TypeScript, and TailwindCSS, it offers a user-friendly interface, supports various education levels, and is responsive across devices, making physics learning accessible and engaging for all students. 🎓💡',
+    image_path: '/images/fisicafacil.gif',
+    deployed_url: 'https://fisicafacil.vercel.app/',
+    github_url: 'https://github.com/JonathanJB88/AIEasyPhysics',
+    category: ['TypeScript', 'React', 'Tailwind CSS'],
+    key_techs: ['React', 'Typescript', 'Tailwind CSS', 'Framer Motion', 'React-hot-toast'],
+  },
+  {
+    id: 2,
     name: 'Portfolio',
     description:
       'Portfolio web page developed with Next.js and TailwindCSS. It includes my resume, skills and projects.',
@@ -221,7 +232,7 @@ export const projects: IProject[] = [
     key_techs: ['React', 'Next', 'Tailwind CSS', 'Framer Motion', 'React Icons'],
   },
   {
-    id: 2,
+    id: 3,
     name: 'My Custom Hooks',
     description: 'React + Typescript were used to create my custom hooks.',
     image_path: '/images/my-custom-hooks-typescript.gif',
@@ -231,7 +242,7 @@ export const projects: IProject[] = [
     key_techs: ['React', 'TypeScript', 'Vite'],
   },
   {
-    id: 3,
+    id: 4,
     name: 'Maps App',
     description: 'To improve my knowledge of React and Typescript, I developed this map application.',
     image_path: '/images/maps-app.gif',
@@ -241,7 +252,7 @@ export const projects: IProject[] = [
     key_techs: ['React', 'TypeScript', 'Vite', 'Jest', 'Css', 'Mapbox', 'React Testing Library'],
   },
   {
-    id: 4,
+    id: 5,
     name: 'Calendar App',
     description: `This React-based calendar application was created. The project's goal is to improve the front-end developer's React expertise.`,
     image_path: '/images/calendar-app.gif',
@@ -251,7 +262,7 @@ export const projects: IProject[] = [
     key_techs: ['React', 'JavaScript', 'Vite', 'Jest', 'Css', 'React Testing Library'],
   },
   {
-    id: 5,
+    id: 6,
     name: 'jon-productcard-component',
     description:
       'Providing reusable components for the open-source community, like this one made with TypeScript and React.',
@@ -262,7 +273,7 @@ export const projects: IProject[] = [
     key_techs: ['React', 'TypeScript', 'CSS3'],
   },
   {
-    id: 6,
+    id: 7,
     name: 'Pokemon App',
     description:
       'Design and develop a Pokemon App that included: searching, filtering, sorting, creating and updating Pokemons.',
@@ -273,7 +284,7 @@ export const projects: IProject[] = [
     key_techs: ['React', 'Redux', 'CSS3', 'Node.js', 'Express', 'PostgreSQL'],
   },
   {
-    id: 7,
+    id: 8,
     name: 'World Travelers',
     description:
       'SPA where users can filter, sort, search, create and join other trips, pay through paypal or web3, comment on tourist activities and chat with other users. Admin users can create tourist activities in destination cities previously added.',
@@ -297,7 +308,7 @@ export const projects: IProject[] = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     name: 'Calculator App',
     description: 'Simple Calculator App developed with React Native + Typescript, for iOS and Android',
     image_path: '/images/calculator.gif',
@@ -307,7 +318,7 @@ export const projects: IProject[] = [
     key_techs: ['React Native', 'TypeScript'],
   },
   {
-    id: 9,
+    id: 10,
     name: 'Movies App',
     description: 'Movies App developed with React Native + Typescript, for iOS and Android.',
     image_path: '/images/movies.gif',
@@ -317,7 +328,7 @@ export const projects: IProject[] = [
     key_techs: ['React Native', 'TypeScript'],
   },
   {
-    id: 10,
+    id: 11,
     name: 'Pokedex App',
     description:
       'Pokedex App developed with React Native + Typescript, for iOS and Android. Details and search by name or id is available.',
@@ -328,7 +339,7 @@ export const projects: IProject[] = [
     key_techs: ['React Native', 'TypeScript'],
   },
   {
-    id: 11,
+    id: 12,
     name: 'Routes App',
     description: 'Routes App developed with React Native + Typescript, for iOS and Android.',
     image_path: '/images/routes.gif',
@@ -338,7 +349,7 @@ export const projects: IProject[] = [
     key_techs: ['React Native', 'TypeScript'],
   },
   {
-    id: 12,
+    id: 13,
     name: 'Products App',
     description:
       'Products App developed with React Native + Typescript, for iOS and Android. Functionalities: User login and register, add and delete products (only admin user), access to camera and gallery to add product pictures.',
